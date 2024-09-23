@@ -1,23 +1,17 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\adminController;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/about', function () {
-    return view('about');
-})->name('about');
+Route::get('/about', [adminController::class,'about'])->name('about');
 
-Route::get('/blog', function () {
-    return view('blog');
-})->name('blog');
+Route::get('/blog', [adminController::class,'index'])->name('blog');
 
-Route::get('/admin/{name}', function ($name) {
-    return "<h1>Admin " . $name . "</h1>";
-})->name('admin');
+Route::get('/WriteBlog', [adminController::class,'WriteBlog'])->name('WriteBlog');
 
-Route::get('/admin', function () {
-    return "<h1>Admin</h1>";
-})->name('admin');
+Route::post('/InsertBlog', [adminController::class,'InsertBlog'])->name('InsertBlog');
+

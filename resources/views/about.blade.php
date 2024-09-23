@@ -4,6 +4,8 @@
 
 @section('content')
     <h1 class="mb-4">about page</h1>
+    <p>Developed by {{$name}}</p>
+    <p>Start developing on {{$DevDate_at}}</p>
     <p>
         Laborum non ullamco sit ullamco ex do excepteur fugiat id reprehenderit voluptate mollit et dolore.
         Do proident pariatur deserunt laborum deserunt do sunt dolore id. Est officia ipsum ut ut nisi sint do
